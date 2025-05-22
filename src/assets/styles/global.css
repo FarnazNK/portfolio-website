@@ -1,0 +1,337 @@
+/* CSS Variables for Consistent Theming */
+:root {
+  --primary-color: #007bff;
+  --primary-hover: #0069d9;
+  --secondary-color: #6c757d;
+  --dark-bg: #121212;
+  --card-bg: #1e1e1e;
+  --card-bg-hover: #333333;
+  --text-light: #f8f9fa;
+  --text-muted: #adb5bd;
+  --text-accent: #9f9fff;
+  --card-border: rgba(255, 255, 255, 0.1);
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.2);
+  --hover-transform: scale(1.03);
+  --transition-speed: 0.3s;
+  --primary-color-rgb: 0, 123, 255;
+}
+
+/* General Layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+/* Main Content Area */
+.main-content {
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  padding: 1rem 0;
+  background: rgba(18, 18, 18, 0.95) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow var(--transition-speed);
+  z-index: 1000;
+}
+
+.navbar.shadow-sm {
+  box-shadow: var(--card-shadow);
+}
+
+.navbar.scrolled {
+  background: rgba(18, 18, 18, 0.85) !important;
+  backdrop-filter: blur(8px);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary-color) !important;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: color var(--transition-speed);
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+/* Section Title */
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  color: var(--text-light);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50px;
+  height: 3px;
+  background: var(--primary-color);
+}
+
+.text-center .section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Particles background container */
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(135deg, #0f0f0f, #1e1e1e);
+}
+
+/* Tech tags styling */
+.tech-tag {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  margin: 0.25rem;
+  background-color: rgba(var(--primary-color-rgb), 0.15);
+  color: var(--text-light);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all var(--transition-speed);
+}
+
+.tech-tag:hover {
+  background-color: rgba(var(--primary-color-rgb), 0.3);
+  transform: translateY(-3px);
+}
+
+/* Tech orbit animation */
+.tech-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.tech-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.tech-icon.python {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: orbit 15s linear infinite;
+}
+
+.tech-icon.react {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  animation: orbit 15s linear infinite 3s;
+}
+
+.tech-icon.js {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: orbit 15s linear infinite 6s;
+}
+
+.tech-icon.database {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  animation: orbit 15s linear infinite 9s;
+}
+
+.tech-icon.blockchain {
+  top: 25%;
+  left: 25%;
+  animation: orbit 15s linear infinite 12s;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(130px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(130px) rotate(-360deg);
+  }
+}
+
+/* Button styling */
+.btn {
+  border-radius: 4px;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Card styling */
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all var(--transition-speed);
+}
+
+.card:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: var(--hover-transform);
+}
+
+/* Background Gradients */
+.bg-gradient {
+  background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: var(--text-light);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer a {
+  color: var(--text-light);
+  transition: color var(--transition-speed);
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .navbar-collapse {
+    background-color: rgba(18, 18, 18, 0.95);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  .tech-orbit {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .tech-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+  
+  @keyframes orbit {
+    0% {
+      transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.4rem;
+  }
+  
+  .btn {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .tech-tag {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,275 @@
+/* General styles for the contact section */
+.contact-section {
+  background: transparent; /* Allows ParticlesBackground to show through */
+  color: #fff; /* White text for dark theme */
+  min-height: 100vh; /* Full viewport height */
+  padding: 80px 0; /* Matches inline padding in JSX */
+}
+
+/* Section title styling */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Lead paragraph styling */
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #1a1a1a !important; /* Darker shade for navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 0.75rem 1rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #fff !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #ff4b5c !important; /* Matches envelope icon color */
+}
+
+.nav-link {
+  color: #ccc !important;
+  font-size: 1.1rem;
+  margin-left: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+}
+
+.nav-link.active {
+  color: #ff4b5c !important; /* Highlight active link */
+  font-weight: 600;
+}
+
+/* Responsive navbar toggle */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Contact card styling */
+.contact-card {
+  background: rgba(30, 30, 30, 0.9); /* Semi-transparent dark background */
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.contact-card i {
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover i {
+  transform: scale(1.2);
+}
+
+.contact-card h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-card .text-muted {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Button styling for contact cards */
+.contact-card .btn {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-card .btn:hover {
+  background-color: #ff4b5c;
+  color: #fff !important;
+  border-color: #ff4b5c;
+}
+
+/* Form card styling */
+.card.bg-dark {
+  background: rgba(30, 30, 30, 0.95) !important;
+  border: none;
+  border-radius: 10px;
+}
+
+.card-header.bg-primary {
+  background: linear-gradient(45deg, #007bff, #00d4ff) !important;
+  border-radius: 10px 10px 0 0;
+  padding: 1.5rem;
+}
+
+.card-header h4 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+/* Form inputs */
+.form-control {
+  background-color: #2a2a2a !important;
+  border-color: #444 !important;
+  color: #fff !important;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #ff4b5c !important;
+  box-shadow: 0 0 8px rgba(255, 75, 92, 0.3) !important;
+  background-color: #2a2a2a !important;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Form labels */
+label {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Submit button */
+.btn-primary {
+  background: linear-gradient(45deg, #007bff, #00d4ff);
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.75rem;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #0056b3, #0099cc);
+  transform: translateY(-2px);
+}
+
+.btn-primary:disabled {
+  background: #555 !important;
+  cursor: not-allowed;
+}
+
+/* Spinner in submit button */
+.spinner-border {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: middle;
+}
+
+/* Success message styling */
+.text-success {
+  color: #28a745 !important;
+}
+
+.fa-check-circle {
+  font-size: 5rem;
+  color: #28a745;
+}
+
+/* Location card styling */
+.card-body h3 {
+  font-size: 1.75rem;
+  color: #fff;
+}
+
+.card-body p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Animation overrides for animate.css */
+.animate__animated {
+  --animate-duration: 1s;
+}
+
+.animate__fadeInDown {
+  --animate-delay: 0.2s;
+}
+
+.animate__fadeInUp {
+  --animate-delay: 0.4s;
+}
+
+.animate__fadeInLeft {
+  --animate-delay: 0.6s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+  }
+
+  .contact-card {
+    padding: 1rem;
+  }
+
+  .contact-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .nav-link {
+    margin-left: 0;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-collapse {
+    background: #1a1a1a;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .card-header h4 {
+    font-size: 1.5rem;
+  }
+}

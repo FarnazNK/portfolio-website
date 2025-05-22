@@ -1,0 +1,37 @@
+.bg-gradient {
+  background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+}
+
+.project-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  margin: 0.25rem;
+  background-color: rgba(0, 123, 255, 0.15);
+  color: #f8f9fa;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background-color: rgba(0, 123, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3) !important;
+}

@@ -1,0 +1,215 @@
+/* Updated SkillsPage.css - Add/update these styles */
+
+.skills-page {
+  min-height: 100vh;
+  padding-top: 80px; /* Increased to account for navbar */
+  background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+  color: #fff; /* Ensure text is white */
+  position: relative;
+  z-index: 2;
+}
+
+/* Ensure all containers have transparent background */
+.skills-page .container {
+  background: transparent !important;
+}
+
+/* Fix any Bootstrap overrides */
+.skills-page .bg-dark {
+  background-color: transparent !important;
+}
+
+/* Ensure body and html don't have white backgrounds */
+body, html {
+  background-color: #121212 !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make sure the page content covers full height */
+.skills-page {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%) !important;
+}
+
+/* If you're using ParticlesBackground, ensure proper layering */
+.particles-background, #particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Section styling to ensure dark theme */
+.skills-page section {
+  background: transparent;
+  color: #fff;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #007bff, #6dcfe7);
+  border-radius: 3px;
+}
+
+.skill-category-card, 
+.tool-category-card, 
+.soft-skill-card {
+  background-color: rgba(30, 30, 30, 0.9) !important; /* More opaque */
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-category-card:hover, 
+.tool-category-card:hover, 
+.soft-skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.category-title {
+  font-size: 1.35rem;
+  margin-bottom: 15px;
+  color: #6dcfe7;
+  border-bottom: 1px solid rgba(109, 207, 231, 0.3);
+  padding-bottom: 10px;
+}
+
+.progress {
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  background: linear-gradient(to right, #007bff, #6dcfe7);
+  transition: width 1.5s ease-in-out;
+}
+
+.tool-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.tool-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.tool-list li i {
+  margin-right: 10px;
+  color: #28a745;
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(0, 123, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: #6dcfe7;
+  transition: all 0.3s ease;
+}
+
+.soft-skill-card:hover .icon-circle {
+  transform: scale(1.1);
+  background-color: rgba(0, 123, 255, 0.2);
+}
+
+.text-muted {
+  color: #adb5bd !important;
+}
+
+/* Ensure all text is visible */
+.skills-page h1,
+.skills-page h2,
+.skills-page h3,
+.skills-page h4,
+.skills-page h5,
+.skills-page p,
+.skills-page span,
+.skills-page div {
+  color: #fff;
+}
+
+.skills-page .text-muted {
+  color: #adb5bd !important;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 10px 25px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 105, 217, 0.3);
+}
+
+.btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff;
+  padding: 10px 25px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 105, 217, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  .category-title {
+    font-size: 1.2rem;
+  }
+  
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .icon-circle i {
+    font-size: 1.5rem;
+  }
+}

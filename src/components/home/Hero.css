@@ -1,0 +1,87 @@
+.profile-section {
+  position: relative;
+  z-index: 1;
+  padding: 150px 20px 100px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.profile-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.profile-section h2 {
+  font-size: 1.5rem;
+  color: var(--text-accent, #9f9fff);
+}
+
+.profile-section p {
+  font-size: 1.2rem;
+  color: var(--text-muted, #adb5bd);
+  margin-top: 10px;
+}
+
+.typing-cursor {
+  font-weight: 100;
+  animation: blink 1s infinite;
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin: 15px;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.skill-icon:hover {
+  transform: translateY(-10px) scale(1.2);
+  color: #771515;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+.scroll-indicator i {
+  font-size: 2rem;
+  color: var(--primary-color, #007bff);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+  40% { transform: translateY(-10px) translateX(-50%); }
+  60% { transform: translateY(-5px) translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .profile-section {
+    padding: 100px 15px 80px;
+  }
+  
+  .skill-icon {
+    font-size: 2rem;
+    margin: 10px;
+  }
+  
+  .profile-section h1 {
+    font-size: 2.2rem;
+  }
+  
+  .profile-section h2 {
+    font-size: 1.3rem;
+  }
+}

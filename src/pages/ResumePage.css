@@ -1,0 +1,291 @@
+/* General styles */
+.resume-page {
+  min-height: 100vh;
+  padding-top: 80px; /* Space for fixed navbar */
+  padding-bottom: 50px;
+  background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+  color: #fff;
+  position: relative;
+  z-index: 2; /* Above ParticlesBackground */
+}
+
+/* Section title */
+.section-title {
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #007bff, #007bff);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Resume section */
+.resume-section {
+  padding: 80px 0;
+}
+
+/* Card item */
+.card-item {
+  position: relative;
+  background: rgba(30, 30, 30, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid transparent;
+}
+
+.card-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.card-item.active {
+  border-left-color: #007bff;
+  background: rgba(40, 40, 40, 0.95);
+}
+
+.card-indicator {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  background: #007bff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.card-item.active .card-indicator {
+  transform: scale(1.5);
+}
+
+.card-item i {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.card-item h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.card-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.card-details.show {
+  max-height: 500px; /* Adjust based on content */
+}
+
+.card-details p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.card-details .text-muted {
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 0.9rem;
+}
+
+.card-details strong {
+  color: #007bff;
+}
+
+.card-details ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card-details ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.card-details ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background: #007bff;
+  border-radius: 50%;
+}
+
+.card-details ul li:hover {
+  color: #fff;
+}
+
+/* Projects section */
+.projects-section {
+  padding: 80px 0;
+  background: rgba(30, 30, 30, 0.9);
+}
+
+.project-card {
+  background: rgba(40, 40, 40, 0.95);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.project-card i {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 15px;
+}
+
+.project-card .btn {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.project-card .btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* CTA section */
+.cta-section {
+  padding: 60px 0;
+  background: linear-gradient(45deg, #007bff, #eeeded);
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.cta-text {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.cta-button {
+  font-size: 1.2rem;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  background: #fff;
+  color: #007bff;
+  border: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #ff4b5c;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .card-item h3 {
+    font-size: 1.4rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-section,
+  .projects-section,
+  .cta-section {
+    padding: 50px 0;
+  }
+
+  .card-item {
+    margin-bottom: 20px;
+  }
+
+  .card-details ul li {
+    font-size: 0.9rem;
+  }
+
+  .cta-title {
+    font-size: 1.8rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .card-item {
+    padding: 15px;
+  }
+
+  .card-item i {
+    font-size: 1.5rem;
+  }
+
+  .card-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-card {
+    padding: 15px;
+  }
+
+  .project-card i {
+    font-size: 1.5rem;
+  }
+}

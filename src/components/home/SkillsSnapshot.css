@@ -1,0 +1,31 @@
+.skill-category {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.skill-category:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.progress {
+  height: 8px;
+  overflow: hidden;
+  background-color: #2c2c2c;
+  border-radius: 4px;
+}
+
+.progress-bar {
+  background-color: #007bff;
+  transition: width 1.5s ease-in-out;
+}
+
+.text-primary {
+  color: #007bff !important;
+}
+
+.text-muted {
+  color: #adb5bd !important;
+}
